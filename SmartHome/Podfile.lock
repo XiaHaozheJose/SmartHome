@@ -1,0 +1,18 @@
+PODS:
+  - Alamofire (4.6.0)
+  - SnapKit (4.0.0)
+  - UICircularProgressRing (1.7.5)
+
+DEPENDENCIES:
+  - Alamofire
+  - SnapKit
+  - UICircularProgressRing
+
+SPEC CHECKSUMS:
+  Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
+  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
+  UICircularProgressRing: b35e45dc82aac8009d038ef4d2e19718675df2bd
+
+PODFILE CHECKSUM: b6b6c19fa085ad66f5f82110b651dc0affc00f05
+
+COCOAPODS: 1.2.0

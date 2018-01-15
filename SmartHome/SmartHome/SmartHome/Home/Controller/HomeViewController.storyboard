@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hGo-dX-VsN">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="C8J-AK-uV0">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="hGo-dX-VsN" customClass="HomeViewController" customModule="SmartHome" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iiL-4B-hHu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon" translatesAutoresizingMaskIntoConstraints="NO" id="ZWR-QX-DrB">
+                                <rect key="frame" x="30" y="30" width="56.5" height="56.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ZWR-QX-DrB" secondAttribute="height" multiplier="1:1" id="zG7-1E-At2"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome Home " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yhu-si-cec">
+                                <rect key="frame" x="30" y="116.5" width="315" height="27"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jose" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PyV-aL-VFH">
+                                <rect key="frame" x="30" y="148.5" width="315" height="27"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Channel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aaf-Vu-crX">
+                                <rect key="frame" x="30" y="205.5" width="63" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.22051084039999999" green="0.53450208899999996" blue="0.84590727089999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CBC-01-oth">
+                                <rect key="frame" x="30" y="452" width="315" height="200"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GXE-Ms-Ep0" customClass="SwipeableCards" customModule="SmartHome" customModuleProvider="target">
+                                <rect key="frame" x="30" y="236.5" width="315" height="133"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Control" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KLs-1a-MZd">
+                                <rect key="frame" x="30" y="416" width="57" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.22051084039999999" green="0.53450208899999996" blue="0.84590727089999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="G8j-4i-UBw" firstAttribute="trailing" secondItem="GXE-Ms-Ep0" secondAttribute="trailing" constant="30" id="10h-UY-jk8"/>
+                            <constraint firstItem="CBC-01-oth" firstAttribute="height" secondItem="iiL-4B-hHu" secondAttribute="height" multiplier="0.3" id="4to-0w-GZc"/>
+                            <constraint firstItem="GXE-Ms-Ep0" firstAttribute="top" secondItem="aaf-Vu-crX" secondAttribute="bottom" constant="10" id="6Cy-lg-hDF"/>
+                            <constraint firstItem="GXE-Ms-Ep0" firstAttribute="height" secondItem="iiL-4B-hHu" secondAttribute="height" multiplier="0.2" id="7z2-P4-5Sh"/>
+                            <constraint firstItem="PyV-aL-VFH" firstAttribute="trailing" secondItem="yhu-si-cec" secondAttribute="trailing" id="BV7-zu-1vV"/>
+                            <constraint firstItem="KLs-1a-MZd" firstAttribute="leading" secondItem="GXE-Ms-Ep0" secondAttribute="leading" id="CB2-A5-BEd"/>
+                            <constraint firstItem="G8j-4i-UBw" firstAttribute="trailing" secondItem="CBC-01-oth" secondAttribute="trailing" constant="30" id="CQE-1G-1Lv"/>
+                            <constraint firstItem="ZWR-QX-DrB" firstAttribute="leading" secondItem="G8j-4i-UBw" secondAttribute="leading" constant="30" id="E16-pO-rBQ"/>
+                            <constraint firstItem="aaf-Vu-crX" firstAttribute="top" secondItem="PyV-aL-VFH" secondAttribute="bottom" constant="30" id="GpZ-iz-RaB"/>
+                            <constraint firstItem="yhu-si-cec" firstAttribute="top" secondItem="ZWR-QX-DrB" secondAttribute="bottom" constant="30" id="JwK-1H-X92"/>
+                            <constraint firstItem="G8j-4i-UBw" firstAttribute="trailing" secondItem="yhu-si-cec" secondAttribute="trailing" constant="30" id="Kof-RQ-MW9"/>
+                            <constraint firstItem="CBC-01-oth" firstAttribute="leading" secondItem="G8j-4i-UBw" secondAttribute="leading" constant="30" id="MRL-ei-e89"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="KLs-1a-MZd" secondAttribute="trailing" constant="20" symbolic="YES" id="ORD-wt-y6w"/>
+                            <constraint firstItem="CBC-01-oth" firstAttribute="top" secondItem="KLs-1a-MZd" secondAttribute="bottom" constant="15" id="TND-RC-hBt"/>
+                            <constraint firstItem="PyV-aL-VFH" firstAttribute="top" secondItem="yhu-si-cec" secondAttribute="bottom" constant="5" id="U7r-ZI-Lvq"/>
+                            <constraint firstItem="ZWR-QX-DrB" firstAttribute="width" secondItem="iiL-4B-hHu" secondAttribute="width" multiplier="0.15" id="W9S-jt-Mhq"/>
+                            <constraint firstItem="ZWR-QX-DrB" firstAttribute="top" secondItem="iiL-4B-hHu" secondAttribute="top" constant="30" id="WTw-OE-dAp"/>
+                            <constraint firstItem="yhu-si-cec" firstAttribute="leading" secondItem="G8j-4i-UBw" secondAttribute="leading" constant="30" id="awD-u3-AEU"/>
+                            <constraint firstItem="G8j-4i-UBw" firstAttribute="bottom" secondItem="CBC-01-oth" secondAttribute="bottom" constant="15" id="bfM-az-667"/>
+                            <constraint firstItem="KLs-1a-MZd" firstAttribute="top" relation="greaterThanOrEqual" secondItem="GXE-Ms-Ep0" secondAttribute="bottom" constant="15" id="qQA-LQ-MJv"/>
+                            <constraint firstItem="aaf-Vu-crX" firstAttribute="leading" secondItem="PyV-aL-VFH" secondAttribute="leading" id="rMZ-ll-Nmf"/>
+                            <constraint firstItem="GXE-Ms-Ep0" firstAttribute="leading" secondItem="G8j-4i-UBw" secondAttribute="leading" constant="30" id="s1m-Wv-sfK"/>
+                            <constraint firstItem="PyV-aL-VFH" firstAttribute="leading" secondItem="yhu-si-cec" secondAttribute="leading" id="sdg-R9-4YT"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="aaf-Vu-crX" secondAttribute="trailing" constant="20" symbolic="YES" id="tiu-Ej-rHf"/>
+                            <constraint firstItem="GXE-Ms-Ep0" firstAttribute="centerX" secondItem="iiL-4B-hHu" secondAttribute="centerX" id="uKW-OC-Wvg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="G8j-4i-UBw"/>
+                    </view>
+                    <connections>
+                        <outlet property="cardView" destination="GXE-Ms-Ep0" id="FQa-Ma-wrV"/>
+                        <outlet property="controlView" destination="CBC-01-oth" id="NG3-cm-emC"/>
+                        <outlet property="iconImage" destination="ZWR-QX-DrB" id="lu7-HS-Gzy"/>
+                        <outlet property="nombre" destination="PyV-aL-VFH" id="LBf-rT-tWl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r9S-y2-b2Z" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icon" width="66" height="66"/>
+    </resources>
+</document>

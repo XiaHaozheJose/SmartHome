@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ScanFaceController" customModule="SmartHome" customModuleProvider="target">
+            <connections>
+                <outlet property="scanImageView" destination="fbX-jM-odz" id="OeY-SA-nG9"/>
+                <outlet property="scanView" destination="DZc-WG-cC1" id="pif-wQ-nhe"/>
+                <outlet property="topConstaint" destination="0b1-4X-W9I" id="IMM-lD-CiY"/>
+                <outlet property="view" destination="OC7-tY-vuK" id="HEr-zx-nip"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="OC7-tY-vuK">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DZc-WG-cC1">
+                    <rect key="frame" x="62" y="209" width="250" height="250"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrcode_border" translatesAutoresizingMaskIntoConstraints="NO" id="hlA-v8-seN">
+                            <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
+                            <rect key="contentStretch" x="0.5" y="0.5" width="0.0" height="0.0"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrcode_scanline_qrcode" translatesAutoresizingMaskIntoConstraints="NO" id="fbX-jM-odz">
+                            <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="250" id="sEj-OV-N04"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="fbX-jM-odz" firstAttribute="top" secondItem="DZc-WG-cC1" secondAttribute="top" id="0b1-4X-W9I"/>
+                        <constraint firstAttribute="trailing" secondItem="fbX-jM-odz" secondAttribute="trailing" id="7Rr-Al-PNM"/>
+                        <constraint firstItem="fbX-jM-odz" firstAttribute="leading" secondItem="DZc-WG-cC1" secondAttribute="leading" id="PeA-Fq-aFm"/>
+                        <constraint firstAttribute="height" constant="250" id="U63-JB-N4Z"/>
+                        <constraint firstAttribute="trailing" secondItem="hlA-v8-seN" secondAttribute="trailing" id="bFn-K4-Og4"/>
+                        <constraint firstAttribute="width" constant="250" id="jvc-0C-dYS"/>
+                        <constraint firstItem="hlA-v8-seN" firstAttribute="top" secondItem="DZc-WG-cC1" secondAttribute="top" id="r9d-Fi-CVT"/>
+                        <constraint firstAttribute="bottom" secondItem="hlA-v8-seN" secondAttribute="bottom" id="sKr-8Z-2Fa"/>
+                        <constraint firstItem="hlA-v8-seN" firstAttribute="leading" secondItem="DZc-WG-cC1" secondAttribute="leading" id="u2s-6L-frM"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="DZc-WG-cC1" firstAttribute="centerY" secondItem="OC7-tY-vuK" secondAttribute="centerY" id="GSs-rJ-syO"/>
+                <constraint firstItem="DZc-WG-cC1" firstAttribute="centerX" secondItem="OC7-tY-vuK" secondAttribute="centerX" id="gWD-pY-07j"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="aEg-3Q-673"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="qrcode_border" width="51" height="51"/>
+        <image name="qrcode_scanline_qrcode" width="218" height="170"/>
+    </resources>
+</document>

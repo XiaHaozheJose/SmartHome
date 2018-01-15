@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeueExtras.ttc">
+            <string>HelveticaNeue-CondensedBlack</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DoorViewController" customModule="SmartHome" customModuleProvider="target">
+            <connections>
+                <outlet property="doorStatus" destination="IZJ-MI-DCI" id="f89-7g-N5X"/>
+                <outlet property="doorSwitch" destination="Tfa-dS-91n" id="YdS-KL-uPM"/>
+                <outlet property="view" destination="3ZP-EH-mZ1" id="QJV-fR-jzR"/>
+                <outlet property="voiceBtn" destination="8QZ-Ob-TM0" id="aCr-cy-7UH"/>
+                <outlet property="welcomeImage" destination="TjW-Xv-PmU" id="e9D-ft-KvH"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="3ZP-EH-mZ1">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eHn-tR-oGP">
+                    <rect key="frame" x="30" y="30" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="0Vu-iF-Yyo"/>
+                        <constraint firstAttribute="height" constant="50" id="hTx-R7-vDC"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IZJ-MI-DCI">
+                    <rect key="frame" x="155.5" y="134" width="64" height="64"/>
+                    <state key="normal" image="close"/>
+                    <state key="selected" image="open"/>
+                </button>
+                <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="welcome" translatesAutoresizingMaskIntoConstraints="NO" id="TjW-Xv-PmU">
+                    <rect key="frame" x="123.5" y="277.5" width="128" height="113"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8QZ-Ob-TM0" customClass="VoiceButton" customModule="SmartHome" customModuleProvider="target">
+                    <rect key="frame" x="15" y="603" width="345" height="49"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="49" id="V8z-27-bJV"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <state key="normal" title="Hold To Talk">
+                        <color key="titleColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                    </state>
+                    <state key="highlighted" title="Release To Send">
+                        <color key="titleColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                    </state>
+                    <connections>
+                        <action selector="dragInside:" destination="-1" eventType="touchDragInside" id="1ZW-Va-e1h"/>
+                        <action selector="dragOutside:" destination="-1" eventType="touchDragOutside" id="5is-6F-kjp"/>
+                        <action selector="touchDown:" destination="-1" eventType="touchDown" id="wpc-dy-XLW"/>
+                        <action selector="touchInside:" destination="-1" eventType="touchUpInside" id="Fhs-cp-Nja"/>
+                        <action selector="touchOutside:" destination="-1" eventType="touchUpOutside" id="afV-Bl-o52"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Door" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efJ-12-Veg">
+                    <rect key="frame" x="30" y="95" width="39" height="24"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="20"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Tfa-dS-91n">
+                    <rect key="frame" x="311" y="95" width="51" height="31"/>
+                    <connections>
+                        <action selector="changedSwitch:" destination="-1" eventType="valueChanged" id="tC4-ta-UdK"/>
+                    </connections>
+                </switch>
+            </subviews>
+            <color key="backgroundColor" red="0.15048319099999999" green="0.17211982610000001" blue="0.43023318049999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Tfa-dS-91n" firstAttribute="top" secondItem="efJ-12-Veg" secondAttribute="top" id="2O1-Za-dIr"/>
+                <constraint firstItem="8QZ-Ob-TM0" firstAttribute="leading" secondItem="X6N-XF-nwr" secondAttribute="leading" constant="15" id="9jT-Bf-A9c"/>
+                <constraint firstItem="efJ-12-Veg" firstAttribute="top" secondItem="eHn-tR-oGP" secondAttribute="bottom" constant="15" id="AFq-gH-xvx"/>
+                <constraint firstItem="X6N-XF-nwr" firstAttribute="trailing" secondItem="Tfa-dS-91n" secondAttribute="trailing" constant="15" id="BZT-oR-ABv"/>
+                <constraint firstItem="X6N-XF-nwr" firstAttribute="bottom" secondItem="8QZ-Ob-TM0" secondAttribute="bottom" constant="15" id="JFv-zN-ook"/>
+                <constraint firstItem="TjW-Xv-PmU" firstAttribute="centerX" secondItem="3ZP-EH-mZ1" secondAttribute="centerX" id="KMS-wq-jvW"/>
+                <constraint firstItem="eHn-tR-oGP" firstAttribute="top" secondItem="3ZP-EH-mZ1" secondAttribute="top" constant="30" id="RND-xt-Gj0"/>
+                <constraint firstItem="efJ-12-Veg" firstAttribute="leading" secondItem="eHn-tR-oGP" secondAttribute="leading" id="UG9-3p-kh5"/>
+                <constraint firstItem="IZJ-MI-DCI" firstAttribute="top" secondItem="efJ-12-Veg" secondAttribute="bottom" constant="15" id="X4F-59-0bO"/>
+                <constraint firstItem="TjW-Xv-PmU" firstAttribute="centerY" secondItem="3ZP-EH-mZ1" secondAttribute="centerY" id="ch2-Zi-DtE"/>
+                <constraint firstItem="X6N-XF-nwr" firstAttribute="trailing" secondItem="8QZ-Ob-TM0" secondAttribute="trailing" constant="15" id="dX9-LH-LGp"/>
+                <constraint firstItem="eHn-tR-oGP" firstAttribute="leading" secondItem="X6N-XF-nwr" secondAttribute="leading" constant="30" id="lCe-dC-vIM"/>
+                <constraint firstItem="IZJ-MI-DCI" firstAttribute="centerX" secondItem="3ZP-EH-mZ1" secondAttribute="centerX" id="nLV-GW-MVL"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="X6N-XF-nwr"/>
+            <point key="canvasLocation" x="33.5" y="54.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="close" width="64" height="64"/>
+        <image name="open" width="64" height="64"/>
+        <image name="welcome" width="128" height="113"/>
+    </resources>
+</document>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ChalkboardSE.ttc">
+            <string>ChalkboardSE-Bold</string>
+        </array>
+        <array key="HelveticaNeueExtras.ttc">
+            <string>HelveticaNeue-CondensedBlack</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TempYLightController" customModule="SmartHome" customModuleProvider="target">
+            <connections>
+                <outlet property="circularTmp" destination="sTy-RU-YHm" id="qyK-g4-nHt"/>
+                <outlet property="coolTmp" destination="59V-ox-NxB" id="Pyi-tq-w1M"/>
+                <outlet property="currentTmp" destination="bur-DS-bro" id="cmP-Pz-fNb"/>
+                <outlet property="funTmp" destination="whL-xK-BqN" id="xwd-DN-VFm"/>
+                <outlet property="hotTmp" destination="Koc-0B-5ec" id="s1t-og-1Ni"/>
+                <outlet property="iconImage" destination="YQ3-Vc-qRa" id="SCv-ON-ZGQ"/>
+                <outlet property="segment" destination="rvc-3w-JWj" id="qbE-q3-C6W"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sTy-RU-YHm" customClass="UICircularProgressRingView" customModule="UICircularProgressRing">
+                    <rect key="frame" x="150" y="60" width="375" height="547"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="outerRingColor">
+                            <color key="value" red="0.21208633760000001" green="0.89506990419999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="fontColor">
+                            <color key="value" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="minValue">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="showFloatingPoint" value="YES"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
+                            <real key="value" value="90"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="string" keyPath="valueIndicator" value="°C"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="startAngle">
+                            <real key="value" value="80"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="outerRingWidth">
+                            <real key="value" value="30"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="innerRingWidth">
+                            <real key="value" value="20"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="innerRingColor">
+                            <color key="value" white="1" alpha="0.60000002379999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="innerRingSpacing">
+                            <real key="value" value="50"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="shouldShowValueText" value="YES"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="value">
+                            <real key="value" value="20"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YQ3-Vc-qRa">
+                    <rect key="frame" x="30" y="30" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="feC-T0-18q"/>
+                        <constraint firstAttribute="height" constant="50" id="vYx-oK-kUu"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pg3-4r-r6t">
+                    <rect key="frame" x="30" y="95" width="103.5" height="24"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="20"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7gd-I0-nCH">
+                    <rect key="frame" x="30" y="134" width="32" height="32"/>
+                    <state key="normal" image="on"/>
+                    <state key="selected" image="off"/>
+                    <connections>
+                        <action selector="startLeerTem:" destination="-1" eventType="touchUpInside" id="xET-wE-Q6S"/>
+                    </connections>
+                </button>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rvc-3w-JWj">
+                    <rect key="frame" x="139" y="624" width="97" height="29"/>
+                    <color key="backgroundColor" red="0.15048319099999999" green="0.17211982610000001" blue="0.43023318049999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <segments>
+                        <segment title="Temp"/>
+                        <segment title="Light"/>
+                    </segments>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <action selector="changeTmpYLight:" destination="-1" eventType="valueChanged" id="HFi-MC-9y2"/>
+                    </connections>
+                </segmentedControl>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="59V-ox-NxB">
+                    <rect key="frame" x="30" y="562" width="32" height="32"/>
+                    <state key="normal" image="cool_normal"/>
+                    <state key="selected" image="cool_select"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Koc-0B-5ec">
+                    <rect key="frame" x="30" y="515" width="32" height="32"/>
+                    <state key="normal" image="hot_normal"/>
+                    <state key="selected" image="hot_select"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="whL-xK-BqN">
+                    <rect key="frame" x="30" y="468" width="32" height="32"/>
+                    <state key="normal" image="fan_normal"/>
+                    <state key="selected" image="fan_select"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="33.33°C" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bur-DS-bro">
+                    <rect key="frame" x="30" y="181" width="115" height="41.5"/>
+                    <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="29"/>
+                    <color key="textColor" red="0.89926737546920776" green="0.9924132227897644" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.15048319101333618" green="0.17211982607841492" blue="0.4302331805229187" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="sTy-RU-YHm" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="60" id="0zN-IP-2OB"/>
+                <constraint firstItem="YQ3-Vc-qRa" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="30" id="8ft-iL-cV1"/>
+                <constraint firstItem="Koc-0B-5ec" firstAttribute="top" secondItem="whL-xK-BqN" secondAttribute="bottom" constant="15" id="AN8-UP-WL3"/>
+                <constraint firstItem="Pg3-4r-r6t" firstAttribute="leading" secondItem="YQ3-Vc-qRa" secondAttribute="leading" id="APE-1t-FfY"/>
+                <constraint firstItem="Koc-0B-5ec" firstAttribute="leading" secondItem="59V-ox-NxB" secondAttribute="leading" id="BSp-Tp-YMF"/>
+                <constraint firstAttribute="bottom" secondItem="sTy-RU-YHm" secondAttribute="bottom" constant="60" id="EoV-qO-m9I"/>
+                <constraint firstItem="rvc-3w-JWj" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="HLe-Py-FOn"/>
+                <constraint firstItem="sTy-RU-YHm" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="LG9-rL-WGc"/>
+                <constraint firstItem="59V-ox-NxB" firstAttribute="top" secondItem="Koc-0B-5ec" secondAttribute="bottom" constant="15" id="PHL-Dh-gQF"/>
+                <constraint firstItem="59V-ox-NxB" firstAttribute="leading" secondItem="7gd-I0-nCH" secondAttribute="leading" id="QdD-gO-7Wa"/>
+                <constraint firstItem="YQ3-Vc-qRa" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="T7d-3J-Ac7"/>
+                <constraint firstItem="7gd-I0-nCH" firstAttribute="leading" secondItem="Pg3-4r-r6t" secondAttribute="leading" id="VTv-yz-Zfv"/>
+                <constraint firstItem="whL-xK-BqN" firstAttribute="leading" secondItem="Koc-0B-5ec" secondAttribute="leading" id="Wag-7F-NHN"/>
+                <constraint firstItem="sTy-RU-YHm" firstAttribute="leading" secondItem="bur-DS-bro" secondAttribute="trailing" constant="5" id="deY-UC-3zr"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="rvc-3w-JWj" secondAttribute="bottom" constant="15" id="eQm-Fh-9Je"/>
+                <constraint firstItem="bur-DS-bro" firstAttribute="top" secondItem="7gd-I0-nCH" secondAttribute="bottom" constant="15" id="gzS-GZ-aHx"/>
+                <constraint firstItem="sTy-RU-YHm" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" constant="150" id="hb4-lg-XnQ"/>
+                <constraint firstItem="rvc-3w-JWj" firstAttribute="top" secondItem="59V-ox-NxB" secondAttribute="bottom" constant="30" id="jD2-rV-fmT"/>
+                <constraint firstItem="7gd-I0-nCH" firstAttribute="top" secondItem="Pg3-4r-r6t" secondAttribute="bottom" constant="15" id="kmQ-oi-ann"/>
+                <constraint firstItem="bur-DS-bro" firstAttribute="leading" secondItem="7gd-I0-nCH" secondAttribute="leading" id="oM0-Vk-b2t"/>
+                <constraint firstItem="Pg3-4r-r6t" firstAttribute="top" secondItem="YQ3-Vc-qRa" secondAttribute="bottom" constant="15" id="zpc-5H-3kz"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="41" y="31"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="cool_normal" width="32" height="32"/>
+        <image name="cool_select" width="32" height="32"/>
+        <image name="fan_normal" width="32" height="32"/>
+        <image name="fan_select" width="32" height="32"/>
+        <image name="hot_normal" width="32" height="32"/>
+        <image name="hot_select" width="32" height="32"/>
+        <image name="off" width="32" height="32"/>
+        <image name="on" width="32" height="32"/>
+    </resources>
+</document>

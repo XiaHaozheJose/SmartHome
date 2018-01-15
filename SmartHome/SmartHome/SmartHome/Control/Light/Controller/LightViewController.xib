@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ChalkboardSE.ttc">
+            <string>ChalkboardSE-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LightViewController" customModule="SmartHome" customModuleProvider="target">
+            <connections>
+                <outlet property="iconImage" destination="0iJ-I5-es1" id="IcM-fy-AtI"/>
+                <outlet property="lightStatus" destination="8nm-md-RXK" id="6VS-d8-StQ"/>
+                <outlet property="percentLight" destination="leg-HX-6PL" id="fc6-5g-R6p"/>
+                <outlet property="progressLight" destination="h6O-4x-Omy" id="4Vc-mf-kRo"/>
+                <outlet property="segment" destination="qEj-Vo-cqs" id="I8O-Ht-7Hg"/>
+                <outlet property="view" destination="qVj-NU-JKF" id="m1i-Th-dgf"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="qVj-NU-JKF">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h6O-4x-Omy" customClass="UICircularProgressRingView" customModule="UICircularProgressRing">
+                    <rect key="frame" x="150" y="60" width="375" height="547"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="outerRingColor">
+                            <color key="value" red="0.89926737550000002" green="0.99241322279999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="fontColor">
+                            <color key="value" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="minValue">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="showFloatingPoint" value="YES"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
+                            <real key="value" value="90"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="startAngle">
+                            <real key="value" value="80"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="outerRingWidth">
+                            <real key="value" value="30"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="innerRingWidth">
+                            <real key="value" value="20"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="innerRingColor">
+                            <color key="value" red="0.94125282764434814" green="0.99223345518112183" blue="0.014848962426185608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="innerRingSpacing">
+                            <real key="value" value="50"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="shouldShowValueText" value="YES"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="value">
+                            <real key="value" value="20"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0iJ-I5-es1">
+                    <rect key="frame" x="30" y="30" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="Sas-Yp-pDz"/>
+                        <constraint firstAttribute="height" constant="50" id="esk-HG-DmA"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Light" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="47A-8e-vu8">
+                    <rect key="frame" x="30" y="95" width="45" height="24"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F7m-v8-4l7">
+                    <rect key="frame" x="30" y="134" width="32" height="32"/>
+                    <state key="normal" image="on"/>
+                    <state key="selected" image="off"/>
+                    <connections>
+                        <action selector="startConnection:" destination="-1" eventType="touchUpInside" id="dI3-tm-LKs"/>
+                    </connections>
+                </button>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="qEj-Vo-cqs">
+                    <rect key="frame" x="139" y="624" width="97" height="29"/>
+                    <color key="backgroundColor" red="0.15048319099999999" green="0.17211982610000001" blue="0.43023318049999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <segments>
+                        <segment title="Temp"/>
+                        <segment title="Light"/>
+                    </segments>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <action selector="ChangeView:" destination="-1" eventType="valueChanged" id="ajP-ag-aB0"/>
+                    </connections>
+                </segmentedControl>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8nm-md-RXK">
+                    <rect key="frame" x="30" y="530" width="64" height="64"/>
+                    <state key="normal" image="light_normal-2"/>
+                    <state key="selected" image="light_select"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20.22%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="leg-HX-6PL">
+                    <rect key="frame" x="30" y="181" width="115" height="43"/>
+                    <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="30"/>
+                    <color key="textColor" red="0.89926737550000002" green="0.99241322279999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.15048319099999999" green="0.17211982610000001" blue="0.43023318049999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="47A-8e-vu8" firstAttribute="leading" secondItem="0iJ-I5-es1" secondAttribute="leading" id="2Bb-7K-kJv"/>
+                <constraint firstItem="qEj-Vo-cqs" firstAttribute="centerX" secondItem="qVj-NU-JKF" secondAttribute="centerX" id="3GC-YY-S5x"/>
+                <constraint firstItem="leg-HX-6PL" firstAttribute="leading" secondItem="F7m-v8-4l7" secondAttribute="leading" id="3JS-uR-ykE"/>
+                <constraint firstItem="JBb-Qd-nbX" firstAttribute="bottom" secondItem="qEj-Vo-cqs" secondAttribute="bottom" constant="15" id="5oG-DV-PXq"/>
+                <constraint firstItem="h6O-4x-Omy" firstAttribute="top" secondItem="qVj-NU-JKF" secondAttribute="top" constant="60" id="8b3-mK-Dvo"/>
+                <constraint firstItem="h6O-4x-Omy" firstAttribute="width" secondItem="qVj-NU-JKF" secondAttribute="width" id="KVA-nx-Wuz"/>
+                <constraint firstItem="8nm-md-RXK" firstAttribute="leading" secondItem="F7m-v8-4l7" secondAttribute="leading" id="MEp-bT-TYr"/>
+                <constraint firstItem="leg-HX-6PL" firstAttribute="top" secondItem="F7m-v8-4l7" secondAttribute="bottom" constant="15" id="R2V-c3-22D"/>
+                <constraint firstAttribute="bottom" secondItem="h6O-4x-Omy" secondAttribute="bottom" constant="60" id="Xec-db-5ld"/>
+                <constraint firstItem="h6O-4x-Omy" firstAttribute="trailing" secondItem="JBb-Qd-nbX" secondAttribute="trailing" constant="150" id="ZNa-qL-20X"/>
+                <constraint firstItem="F7m-v8-4l7" firstAttribute="top" secondItem="47A-8e-vu8" secondAttribute="bottom" constant="15" id="aK3-IC-nO1"/>
+                <constraint firstItem="F7m-v8-4l7" firstAttribute="leading" secondItem="47A-8e-vu8" secondAttribute="leading" id="dS7-R0-KRH"/>
+                <constraint firstItem="0iJ-I5-es1" firstAttribute="top" secondItem="qVj-NU-JKF" secondAttribute="top" constant="30" id="maH-IG-ijj"/>
+                <constraint firstItem="qEj-Vo-cqs" firstAttribute="top" secondItem="8nm-md-RXK" secondAttribute="bottom" constant="30" id="mzp-fR-dOM"/>
+                <constraint firstItem="0iJ-I5-es1" firstAttribute="leading" secondItem="JBb-Qd-nbX" secondAttribute="leading" constant="30" id="nQd-ok-sSY"/>
+                <constraint firstItem="h6O-4x-Omy" firstAttribute="leading" secondItem="leg-HX-6PL" secondAttribute="trailing" constant="5" id="rd0-q5-SFM"/>
+                <constraint firstItem="47A-8e-vu8" firstAttribute="top" secondItem="0iJ-I5-es1" secondAttribute="bottom" constant="15" id="ryZ-Ft-aVA"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="JBb-Qd-nbX"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="light_normal-2" width="64" height="64"/>
+        <image name="light_select" width="64" height="64"/>
+        <image name="off" width="32" height="32"/>
+        <image name="on" width="32" height="32"/>
+    </resources>
+</document>

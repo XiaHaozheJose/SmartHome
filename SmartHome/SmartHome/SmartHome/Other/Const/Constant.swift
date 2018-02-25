@@ -35,6 +35,7 @@ let kOpenDoorCh = "开门"
 let kCloseDoorEn = "close the door"
 let kCloseDoorEs = "cierra la puerta"
 let kCloseDoorCh = "关门"
+
 //Key
 let kCommandDoorOpen = "OPEN_DOOR"
 let kCommandDoorClose = "CLOSE_DOOR"
@@ -47,6 +48,7 @@ let kOpenLuzCh = "开灯"
 let kCloseLuzEn = "turn off the light"
 let kCloseLuzEs = "apaga la luz"
 let kCloseLuzCh = "关灯"
+
 //Key
 let kCommandLedTurnOn = "LED_ON"
 let kCommandLedTurnOFF = "LED_OFF"
@@ -98,10 +100,10 @@ let updateDoorChannel = "https://api.thingspeak.com/update?api_key=CFDS9VCKW2QST
 
 // LED ON PARAMETERS
 let LED_ON_PARAMETERS = [
-            "api_key":api_key_TalkBack,
-            "position":"1",
-            "command_string":kCommandLedTurnOn
-        ]
+    "api_key":api_key_TalkBack,
+    "position":"1",
+    "command_string":kCommandLedTurnOn
+]
 
 // LED OFF PARAMETERS
 let LED_OFF_PARAMETERS = [

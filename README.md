@@ -1,8 +1,8 @@
 # SmartHome
 
-###Es un demo para iOT sobre SmartHome 
-####(Xcode, ThingSpeak,Grove Starter Kit,Intel Galileo Gen 2)
-####(Swift , Java )
+### Es un demo para iOT sobre SmartHome 
+#### (Xcode, ThingSpeak,Grove Starter Kit,Intel Galileo Gen 2)
+#### (Swift , Java )
 
 ![image1](https://github.com/XiaHaozheJose/SmartHome/blob/master/Snip20181120_1.png)
 ![image2](https://github.com/XiaHaozheJose/SmartHome/blob/master/Snip20181120_3.png)
